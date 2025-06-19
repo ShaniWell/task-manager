@@ -96,7 +96,7 @@ src/
 
 ## 🙋 נכתב על ידי
 
-שני דונת  
-כחלק ממטלת קבלה לפיתוח Backend עם Spring Boot
+שני דונט  
+כחלק ממטלת קבלה לפיתוח Backend
 
 </div>
