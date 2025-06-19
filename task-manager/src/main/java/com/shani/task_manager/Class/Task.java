@@ -1,14 +1,9 @@
 package com.shani.task_manager.Class;
 
-import jakarta.validation.constraints.*;//הוספתי dependency
-import org.springframework.stereotype.Component;
-
 //@Component- שמתי את זה בהערה כי אין לנו צורך בזה אם לא עושים controller שמקבל אוביקט וכו' א"א לא יוצר אוביקט רק אנחנו מ TaskUI
 public class Task {
 
     private Long id;
-//    @NotBlank(message = "Name must not be empty")
-//    @Size(max = 100, message = "Name must be at most 100 characters")
     private String name;
     private String description;
     private boolean completed;
