@@ -18,33 +18,22 @@ public class TaskRepository {
         return task;
     }
 
-    // קבלת כל המשימות
     public List<Task> getAllTasks() {
         return new ArrayList<>(tasks.values());
     }
 
-    // מציאת משימה לפי מזהה
     public Optional<Task> findTaskById(Long id) {
         return Optional.ofNullable(tasks.get(id));
     }
 
-    // סימון משימה כהושלמה
     public boolean markTaskAsCompleted(Long id) {
-//        Task task = tasks.get(id);
-//        if (task != null) {
-//            task.setCompleted(true);
-//            return true;
-//        }
-//        return false;
         return findTaskById(id).map(task -> {
             task.setCompleted(true);
             return true;
         }).orElse(false);
     }
 
-    // מחיקת משימה
     public boolean deleteTask(Long id) {
-//        return tasks.remove(id) != null;
         return findTaskById(id).map(task -> {
             tasks.remove(id);
             return true;

@@ -1,6 +1,6 @@
 package com.shani.task_manager.Class;
 
-//@Component- שמתי את זה בהערה כי אין לנו צורך בזה אם לא עושים controller שמקבל אוביקט וכו' א"א לא יוצר אוביקט רק אנחנו מ TaskUI
+//@Component- controller שמתי את זה בהערה כי אין לנו צורך בזה אם לא עושים
 public class Task {
 
     private Long id;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service    // הופך את המחלקה ל-Bean מנוהל ע"י Spring
 public class TaskService {
 
     private final TaskRepository taskRepository;
@@ -21,24 +21,20 @@ public class TaskService {
       return taskRepository.addTask(task);
     }
 
-    // קבלת כל המשימות
     public List<Task> getAllTasks() {
        return taskRepository.getAllTasks();
     }
 
-    // מציאת משימה לפי מזהה
     public Optional<Task> findTaskById(Long id) {
         return taskRepository.findTaskById(id);
     }
 
-    // סימון משימה כהושלמה
     public boolean markTaskAsCompleted(Long id) {
        if(!taskRepository.markTaskAsCompleted(id))
            throw new TaskNotFoundException((id));
        return true;
     }
 
-    // מחיקת משימה
     public boolean deleteTask(Long id) {
         if (!taskRepository.deleteTask(id))
             throw new TaskNotFoundException(id);
