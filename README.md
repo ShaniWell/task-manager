@@ -33,7 +33,7 @@
 
 ## ✅ טכנולוגיות בשימוש
 
-- Java 17
+- Java 21
 - Spring Boot
 - Spring Context / DI
 - CLI – קלט מהמשתמש דרך `Scanner`
